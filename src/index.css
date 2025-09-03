@@ -1,0 +1,387 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import premium fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+/* Professional Financial Design System - Blue & Gold Theme */
+
+@layer base {
+  :root {
+    /* Core Colors - Premium Blue & Gold Theme */
+    --background: 0 0% 99%;
+    --foreground: 214 32% 12%;
+    
+    /* Glass Card System */
+    --card: 0 0% 100%;
+    --card-foreground: 214 32% 12%;
+    --glass-white: 0 0% 100%;
+    --glass-opacity: 0.92;
+    
+    /* Popover & Overlays */
+    --popover: 0 0% 100%;
+    --popover-foreground: 214 32% 12%;
+    
+    /* Primary - Deep Professional Blue (from logo) */
+    --primary: 209 76% 42%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Secondary - Premium Gold */
+    --secondary: 43 96% 56%;
+    --secondary-foreground: 214 32% 12%;
+    
+    /* Muted - Sophisticated Gray-Blue */
+    --muted: 213 27% 94%;
+    --muted-foreground: 214 19% 45%;
+    
+    /* Accent - Light Blue (from logo gradient) */
+    --accent: 199 89% 68%;
+    --accent-foreground: 214 32% 12%;
+    
+    /* Market Indicators */
+    --success: 142 76% 42%;
+    --success-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Warning - Gold Variant */
+    --warning: 43 96% 56%;
+    --warning-foreground: 214 32% 12%;
+    
+    /* Borders & Inputs */
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 209 76% 42%;
+    
+    /* Chart Colors - Blue to Gold Gradient */
+    --chart-1: 209 76% 42%;
+    --chart-2: 43 96% 56%;
+    --chart-3: 199 89% 68%;
+    --chart-4: 142 76% 42%;
+    --chart-5: 0 72% 51%;
+    
+    /* Border Radius */
+    --radius: 0.75rem;
+    
+    /* Glass Effects */
+    --glass-blur: 16px;
+    --glass-border: rgba(255, 255, 255, 0.25);
+    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.12);
+    
+    /* Gold Accent Colors */
+    --gold-primary: 43 96% 56%;
+    --gold-light: 43 96% 68%;
+    --gold-dark: 43 96% 45%;
+    
+    /* Blue Gradient Colors (from logo) */
+    --blue-dark: 214 47% 28%;
+    --blue-primary: 209 76% 42%;
+    --blue-light: 199 89% 68%;
+    --blue-lighter: 193 92% 82%;
+    
+    /* Sidebar */
+    --sidebar-background: 0 0% 99%;
+    --sidebar-foreground: 214 32% 12%;
+    --sidebar-primary: 209 76% 42%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 213 27% 94%;
+    --sidebar-accent-foreground: 214 32% 12%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 209 76% 42%;
+  }
+
+  .dark {
+    /* Dark Mode - Premium Dark with Blue/Gold */
+    --background: 214 35% 7%;
+    --foreground: 210 20% 98%;
+    
+    --card: 214 35% 9%;
+    --card-foreground: 210 20% 98%;
+    --glass-white: 214 35% 11%;
+    --glass-opacity: 0.85;
+    
+    --popover: 214 35% 9%;
+    --popover-foreground: 210 20% 98%;
+    
+    --primary: 209 76% 52%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 43 96% 56%;
+    --secondary-foreground: 214 35% 7%;
+    
+    --muted: 214 35% 15%;
+    --muted-foreground: 214 15% 65%;
+    
+    --accent: 199 89% 68%;
+    --accent-foreground: 214 35% 7%;
+    
+    --success: 142 76% 42%;
+    --success-foreground: 0 0% 100%;
+    
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --warning: 43 96% 56%;
+    --warning-foreground: 214 35% 7%;
+    
+    --border: 214 35% 15%;
+    --input: 214 35% 15%;
+    --ring: 209 76% 52%;
+    
+    --chart-1: 209 76% 52%;
+    --chart-2: 43 96% 56%;
+    --chart-3: 199 89% 68%;
+    --chart-4: 142 76% 42%;
+    --chart-5: 0 72% 51%;
+    
+    --glass-blur: 20px;
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+    
+    --gold-primary: 43 96% 56%;
+    --gold-light: 43 96% 68%;
+    --gold-dark: 43 96% 45%;
+    
+    --blue-dark: 214 47% 18%;
+    --blue-primary: 209 76% 52%;
+    --blue-light: 199 89% 68%;
+    --blue-lighter: 193 92% 82%;
+    
+    --sidebar-background: 214 35% 7%;
+    --sidebar-foreground: 210 20% 98%;
+    --sidebar-primary: 209 76% 52%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 214 35% 15%;
+    --sidebar-accent-foreground: 210 20% 98%;
+    --sidebar-border: 214 35% 15%;
+    --sidebar-ring: 209 76% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  /* Premium Glass Card Effect */
+  .glass-card {
+    @apply relative overflow-hidden rounded-xl;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(255, 255, 255, 0.85) 100%
+    );
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
+    box-shadow: 
+      var(--glass-shadow),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
+  }
+
+  .dark .glass-card {
+    background: linear-gradient(
+      135deg,
+      rgba(30, 41, 59, 0.95) 0%,
+      rgba(30, 41, 59, 0.85) 100%
+    );
+    box-shadow: 
+      var(--glass-shadow),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+  }
+
+  /* Gold Accent Glass Card */
+  .glass-card-gold {
+    @apply relative overflow-hidden rounded-xl;
+    background: linear-gradient(
+      135deg,
+      rgba(251, 191, 36, 0.08) 0%,
+      rgba(251, 191, 36, 0.03) 100%
+    );
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid rgba(251, 191, 36, 0.2);
+    box-shadow: 
+      0 8px 32px 0 rgba(251, 191, 36, 0.1),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
+  }
+
+  /* Premium Blue Gradient Button */
+  .btn-primary-gradient {
+    @apply relative overflow-hidden transition-all duration-300 text-white font-medium;
+    background: linear-gradient(
+      135deg,
+      hsl(209, 76%, 42%) 0%,
+      hsl(199, 89%, 48%) 100%
+    );
+    box-shadow: 
+      0 4px 16px 0 rgba(37, 99, 235, 0.3),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+  }
+
+  .btn-primary-gradient:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+      0 6px 24px 0 rgba(37, 99, 235, 0.4),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.3);
+  }
+
+  /* Gold Accent Button */
+  .btn-gold {
+    @apply relative overflow-hidden transition-all duration-300 font-medium;
+    background: linear-gradient(
+      135deg,
+      hsl(43, 96%, 56%) 0%,
+      hsl(43, 96%, 64%) 100%
+    );
+    color: hsl(214, 32%, 12%);
+    box-shadow: 
+      0 4px 16px 0 rgba(251, 191, 36, 0.3),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
+  }
+
+  .btn-gold:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+      0 6px 24px 0 rgba(251, 191, 36, 0.4),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.6);
+  }
+
+  /* Market Indicator Styles */
+  .market-positive {
+    @apply relative;
+    background: linear-gradient(
+      135deg,
+      rgba(34, 197, 94, 0.1) 0%,
+      rgba(34, 197, 94, 0.05) 100%
+    );
+    @apply text-green-600 dark:text-green-400;
+    @apply border border-green-200 dark:border-green-800;
+  }
+
+  .market-negative {
+    @apply relative;
+    background: linear-gradient(
+      135deg,
+      rgba(239, 68, 68, 0.1) 0%,
+      rgba(239, 68, 68, 0.05) 100%
+    );
+    @apply text-red-600 dark:text-red-400;
+    @apply border border-red-200 dark:border-red-800;
+  }
+
+  /* Premium Number Display */
+  .number-display {
+    font-family: 'Space Grotesk', monospace;
+    @apply tracking-tight font-semibold;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Animated Gradient Text */
+  .gradient-text {
+    @apply font-bold bg-clip-text text-transparent;
+    background-image: linear-gradient(
+      135deg,
+      hsl(209, 76%, 42%) 0%,
+      hsl(43, 96%, 56%) 50%,
+      hsl(199, 89%, 68%) 100%
+    );
+    background-size: 200% 200%;
+    animation: gradient-shift 3s ease infinite;
+  }
+
+  @keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Premium Card Hover Effect */
+  .card-hover {
+    @apply transition-all duration-300 cursor-pointer;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 
+      0 20px 40px -12px rgba(37, 99, 235, 0.25),
+      0 0 0 1px rgba(251, 191, 36, 0.1);
+  }
+
+  /* Subtle Animations */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .float-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes pulse-gold {
+    0%, 100% { 
+      box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.4);
+    }
+    50% { 
+      box-shadow: 0 0 0 10px rgba(251, 191, 36, 0);
+    }
+  }
+
+  .pulse-gold {
+    animation: pulse-gold 2s ease-in-out infinite;
+  }
+
+  /* Professional Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted/30;
+    @apply rounded-lg;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/30;
+    @apply rounded-lg;
+    @apply hover:bg-primary/50;
+  }
+
+  /* Loading Shimmer Effect */
+  .shimmer {
+    @apply relative overflow-hidden;
+  }
+
+  .shimmer::after {
+    content: '';
+    @apply absolute inset-0;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(251, 191, 36, 0.1),
+      transparent
+    );
+    animation: shimmer 2s infinite;
+  }
+
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+}
