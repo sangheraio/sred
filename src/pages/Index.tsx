@@ -110,23 +110,23 @@ const Index = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background via-background to-muted/20">
+    <div className="min-h-screen bg-gradient-to-b from-background via-background to-muted/20 relative">
+      {/* Additional Decoration - Now covers entire page */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[hsl(209,76%,42%)]/5 via-transparent to-[hsl(43,96%,56%)]/5 pointer-events-none"></div>
+      
       <Navigation />
       
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <main className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Premium Hero Section */}
         <div className="relative mb-16 overflow-hidden rounded-3xl">
-          {/* Banner Background Image with Light Opacity */}
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.15]"
-            style={{ backgroundImage: 'url(/banner.png)' }}
-          ></div>
-          
-          {/* Gradient Overlay */}
+          {/* Gradient Overlay - moved before banner for proper layering */}
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/90 to-background rounded-3xl"></div>
           
-          {/* Additional Decoration */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[hsl(209,76%,42%)]/5 via-transparent to-[hsl(43,96%,56%)]/5 rounded-3xl"></div>
+          {/* Banner Background Image - now on top of gradient */}
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.25] rounded-3xl"
+            style={{ backgroundImage: 'url(/banner.png)' }}
+          ></div>
           
           <div className="relative text-center py-12 px-6">
             {/* Logo Animation */}
