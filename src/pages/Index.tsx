@@ -141,9 +141,9 @@ const Index = () => {
 
             {/* Main Title with Gradient */}
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              <span className="gradient-text">Canada's Innovation</span>
+              <span className="gradient-text">Canadian Innovation</span>
               <br />
-              <span className="text-[hsl(43,96%,56%)]">Engine</span>
+              <span className="text-[hsl(43,96%,56%)]">Accelerated</span>
             </h1>
 
             {/* Subtitle */}
